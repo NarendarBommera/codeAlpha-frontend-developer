@@ -1,89 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #0d020d;
-    margin: 0;
-    padding: 0;
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Image Gallery</title>
+   <style>
+      *{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+body{
+    background: #101010;
+}
+.img-gallery{
+      width:80%;
+      margin:100px auto 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      grid-gap: 30px;
+}
+.img-gallery img{
+    width:100%;
+    cursor: pointer;
+}
+.img-gallery img:hover{
+    transform: scale(1.3);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68, 77,136, 0.2);
+}
+.full-img{
     width: 100%;
-    height: 100%;
-    background-image: url('image3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center; 
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.full-img img{
+    width: 90%;
+    max-width: 500px;
+}
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
 }
 h1{
     font-size: 70px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: Times, serif;
     font-style:oblique;
-    color: #fbfcf9;
+    color: #f4f0f0;
 }
 h2{
     font-size: 40px;
     font-family:'Times New Roman', Times, serif;
     font-style: oblique;
-    color: #f4f0f0;
+    color: #e9e5e5;
     
 }
-        
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.image-container {
-    position: relative;
-    display: inline-block;
-}
-.gallery img:hover {
-    transform: scale(1.05);
-}
-    </style>
+   </style>
+
 </head>
 <body>
     <h1><center><u>TASK-I</u></center></h1>
- <h1><center><u>IMAGE GALLERY</u></center></h1>
- <h2><center>using HTML,CSS and  JAVASCRIPT.</center></h2>
-    
-    <div class="gallery-container">
-        <div class="gallery">
-            
-            <img src="https://as1.ftcdn.net/v2/jpg/05/98/17/88/1000_F_598178802_XlEdR6BAJhUOFAi6Bc5Fe9gkeVpTvc4u.jpg">
-            <img src="https://t3.ftcdn.net/jpg/07/36/50/64/240_F_736506495_2USzTVPSP6mGUP2qpsCLfh6LeuugBve9.jpg">
-            <img src="https://t3.ftcdn.net/jpg/07/08/33/82/240_F_708338286_dN5HB6LaS1i2vlIPEunw8KeTH6YVVX4c.jpg">
-            <img src="https://t3.ftcdn.net/jpg/07/16/46/44/240_F_716464441_DvxUkPchxMPozb2zAFof1DHEze2dxKHG.jpg">
-            <img src="https://t4.ftcdn.net/jpg/06/33/86/61/240_F_633866183_SjAf7GgPh93XAUbl6dd6zyYALvtIJP0K.jpg">
-            <img src="https://t3.ftcdn.net/jpg/05/72/95/26/240_F_572952690_0EkyVeP0NljZKdjQC7kYSLZAZoLHU9AP.jpg">
-            <img src="https://t4.ftcdn.net/jpg/04/58/91/39/240_F_458913907_9IcL1AlGGq41RiOr3BdKi7Mko3Q6J7O6.jpg">
-            <img src="https://t4.ftcdn.net/jpg/03/63/45/95/240_F_363459597_I8q3zqhuKd9HyfWm3XWmP4SSD2RFfMIo.jpg">
-            <img src="https://t3.ftcdn.net/jpg/04/76/45/04/240_F_476450459_1a1FtIQsUkY3TVKFCgFpvtvVlWHSBVmU.jpg">
-            <img src="https://t3.ftcdn.net/jpg/04/58/76/28/240_F_458762845_ULfIYKYBbbBSMfVANKvSAJVtIkUA3WFi.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/07/65/81/240_F_507658140_7cQorBexgCC6ewUXk2RFwKw8hydRu5G6.jpg">
-            <img src="https://t4.ftcdn.net/jpg/07/16/92/99/240_F_716929912_XF5ORa68BeGNRCtmnJRy9nqL3NrUJpw1.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/88/21/39/240_F_588213927_txxzTA5PvIPrTpXoZZ4kiEK1symodD7I.jpg">
-            <img src="https://t4.ftcdn.net/jpg/07/15/23/97/240_F_715239743_aWSfiHWkzd2IRIj6Y3XH23VbD4SNSCbH.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/06/69/35/240_F_506693557_zmXISVOX85B9QCGHK9rrpkPvVoYAbpZP.jpg">
-            <img src="https://t3.ftcdn.net/jpg/03/44/58/66/240_F_344586623_H28BdxpwTpr7JnjezpIjGzwslQCi2WIA.jpg">
-            <img src="https://t3.ftcdn.net/jpg/05/09/36/64/240_F_509366472_f4S8YGfFZiMDDt9vyjPsfYknWjb66xsw.jpg">
-            <img src="https://images.pexels.com/photos/18578652/pexels-photo-18578652/free-photo-of-shiva-statue-under-storm-clouds.jpeg?auto=compress&cs=tinysrgb&w=600.jpg">
-            <img src="https://cdn.pixabay.com/photo/2015/12/26/08/14/rishikesh-1108399_640.jpg">
-            <img src="https://plus.unsplash.com/premium_photo-1674898513923-ff73b9d830ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bG9yZCUyMHNoaXZhfGVufDB8fDB8fHww">
-            <img src="https://img.freepik.com/free-vector/hindu-traditional-maha-shivratri-celebration-background-design_1017-49629.jpg?size=626&ext=jpg">
-        </div>
-    </div>
-   
-    <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-    </div>
+    <h1><center><u>IMAGE GALLERY</u></center></h1>
+    <h2><center>using HTML,CSS and  JAVASCRIPT.</center></h2>
 
-    <script>
-        var fullImgBox=document.getElementById("fullImgBox");
+        <div class="full-img" id="fullImgBox">
+        <img src="https://www.cdfa.ca.gov/v6.5/sample/images/gallery/orangecounty-big.jpg" id="fullImg">
+        <span onclick="closefullImg()">X</span>
+         </div>
+
+        <div class="img-gallery">
+            <img src="https://as1.ftcdn.net/v2/jpg/05/98/17/88/1000_F_598178802_XlEdR6BAJhUOFAi6Bc5Fe9gkeVpTvc4u.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/07/36/50/64/240_F_736506495_2USzTVPSP6mGUP2qpsCLfh6LeuugBve9.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/07/08/33/82/240_F_708338286_dN5HB6LaS1i2vlIPEunw8KeTH6YVVX4c.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/07/16/46/44/240_F_716464441_DvxUkPchxMPozb2zAFof1DHEze2dxKHG.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/06/33/86/61/240_F_633866183_SjAf7GgPh93XAUbl6dd6zyYALvtIJP0K.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/05/72/95/26/240_F_572952690_0EkyVeP0NljZKdjQC7kYSLZAZoLHU9AP.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/04/58/91/39/240_F_458913907_9IcL1AlGGq41RiOr3BdKi7Mko3Q6J7O6.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/03/63/45/95/240_F_363459597_I8q3zqhuKd9HyfWm3XWmP4SSD2RFfMIo.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/04/76/45/04/240_F_476450459_1a1FtIQsUkY3TVKFCgFpvtvVlWHSBVmU.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/04/58/76/28/240_F_458762845_ULfIYKYBbbBSMfVANKvSAJVtIkUA3WFi.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/05/07/65/81/240_F_507658140_7cQorBexgCC6ewUXk2RFwKw8hydRu5G6.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/07/16/92/99/240_F_716929912_XF5ORa68BeGNRCtmnJRy9nqL3NrUJpw1.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/05/88/21/39/240_F_588213927_txxzTA5PvIPrTpXoZZ4kiEK1symodD7I.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/07/15/23/97/240_F_715239743_aWSfiHWkzd2IRIj6Y3XH23VbD4SNSCbH.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t4.ftcdn.net/jpg/05/06/69/35/240_F_506693557_zmXISVOX85B9QCGHK9rrpkPvVoYAbpZP.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/03/44/58/66/240_F_344586623_H28BdxpwTpr7JnjezpIjGzwslQCi2WIA.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://t3.ftcdn.net/jpg/05/09/36/64/240_F_509366472_f4S8YGfFZiMDDt9vyjPsfYknWjb66xsw.jpg"onclick="openfullImg(this.src)" >
+            <img src="https://images.pexels.com/photos/18578652/pexels-photo-18578652/free-photo-of-shiva-statue-under-storm-clouds.jpeg?auto=compress&cs=tinysrgb&w=600.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://cdn.pixabay.com/photo/2015/12/26/08/14/rishikesh-1108399_640.jpg" onclick="openfullImg(this.src)" >
+            <img src="https://plus.unsplash.com/premium_photo-1674898513923-ff73b9d830ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bG9yZCUyMHNoaXZhfGVufDB8fDB8fHww" onclick="openfullImg(this.src)" >
+            <img src="https://img.freepik.com/free-vector/hindu-traditional-maha-shivratri-celebration-background-design_1017-49629.jpg?size=626&ext=jpg" onclick="openfullImg(this.src)" >
+         </div>
+      <script>
+         var fullImgBox=document.getElementById("fullImgBox");
          var fullImg=document.getElementById("fullImg");
 
          function openfullImg(pic){
@@ -93,7 +112,6 @@ h2{
          function closefullImg(){
             fullImgBox.style.display ="none";
          }
-
-    </script>
+      </script>
 </body>
 </html>
